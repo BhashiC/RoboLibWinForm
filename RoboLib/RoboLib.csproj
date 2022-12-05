@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADA75647-0CA5-4B87-ACA7-B61049F13387}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RoboLib</RootNamespace>
+    <AssemblyName>RoboLib</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\RoboFactory\Ref\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=1.52.1.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyChanged.Fody.1.52.1\Lib\netstandard10\PropertyChanged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="Extensions\BindingExtensions.cs" />
+    <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Extensions\ElvisOperators.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\MetaExtensions.cs" />
+    <Compile Include="Extensions\UnitExtension.cs" />
+    <Compile Include="GUI\Controls\BindingManager.cs" />
+    <Compile Include="GUI\Controls\BindingManagerCheckBox.cs" />
+    <Compile Include="GUI\Controls\BindingManagerComboBox.cs" />
+    <Compile Include="GUI\Controls\BindingManagerTextBox.cs" />
+    <Compile Include="GUI\Controls\BindingManagerTrackBar.cs" />
+    <Compile Include="GUI\Controls\CustomBinding.cs" />
+    <Compile Include="GUI\Controls\IControlPair.cs" />
+    <Compile Include="GUI\Controls\RCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RCheckBox.Designer.cs">
+      <DependentUpon>RCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\RComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RComboBox.Designer.cs">
+      <DependentUpon>RComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\RefControl.cs" />
+    <Compile Include="GUI\Controls\RTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RTextBox.Designer.cs">
+      <DependentUpon>RTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\RTrackBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\RTrackBar.Designer.cs">
+      <DependentUpon>RTrackBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1Base.Designer.cs">
+      <DependentUpon>Form1Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pages\ComponentGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Pages\ComponentGeneralPage.Designer.cs">
+      <DependentUpon>ComponentGeneralPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pages\TreePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Pages\TreePage.Designer.cs">
+      <DependentUpon>TreePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pages\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Pages\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pages\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Pages\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pages\ViewPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Pages\ViewPage.Designer.cs">
+      <DependentUpon>ViewPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cache.cs" />
+    <Compile Include="Models\Communication\Pages\RS232HeaderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\Communication\Pages\RS232HeaderPanel.Designer.cs">
+      <DependentUpon>RS232HeaderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Communication\Pages\RS232HelpPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\Communication\Pages\RS232HelpPanel.Designer.cs">
+      <DependentUpon>RS232HelpPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Communication\Pages\RS232Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\Communication\Pages\RS232Page.Designer.cs">
+      <DependentUpon>RS232Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Communication\Pages\RS232SettingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\Communication\Pages\RS232SettingsPanel.Designer.cs">
+      <DependentUpon>RS232SettingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Communication\RS232.cs" />
+    <Compile Include="Models\ComponentBase.cs" />
+    <Compile Include="Models\ComponentBuilder.cs" />
+    <Compile Include="Models\CustomJson.cs" />
+    <Compile Include="Models\ObjBase.cs" />
+    <Compile Include="Models\PropertyPageViewModel.cs" />
+    <Compile Include="Models\Robot.cs" />
+    <Compile Include="Models\SystemBuilder.cs" />
+    <Compile Include="Models\Validations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RException.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="RUtils.cs" />
+    <Compile Include="Utils\Singletons\ComponentMap.cs" />
+    <Compile Include="Utils\Singletons\PropMeta.cs" />
+    <Compile Include="Utils\Singletons\Swallower.cs" />
+    <Compile Include="Utils\Singletons\SystemUtils.cs" />
+    <Compile Include="Utils\Singletons\VersionUtils.cs" />
+    <EmbeddedResource Include="GUI\Controls\RCheckBox.resx">
+      <DependentUpon>RCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RComboBox.resx">
+      <DependentUpon>RComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RTextBox.resx">
+      <DependentUpon>RTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\RTrackBar.resx">
+      <DependentUpon>RTrackBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1Base.resx">
+      <DependentUpon>Form1Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pages\ComponentGeneralPage.resx">
+      <DependentUpon>ComponentGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pages\TreePage.resx">
+      <DependentUpon>TreePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pages\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pages\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Communication\Pages\RS232HeaderPanel.resx">
+      <DependentUpon>RS232HeaderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Communication\Pages\RS232HelpPanel.resx">
+      <DependentUpon>RS232HelpPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Communication\Pages\RS232Page.resx">
+      <DependentUpon>RS232Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Communication\Pages\RS232SettingsPanel.resx">
+      <DependentUpon>RS232SettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.1.29.2\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.1.29.2\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.1.29.2\build\dotnet\Fody.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)\$(OutDir)\RoboLib.dll" "C:\RoboFactory\Ref" 
+copy "$(ProjectDir)\$(OutDir)\RoboLib.pdb" "C:\RoboFactory\Ref" 
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
